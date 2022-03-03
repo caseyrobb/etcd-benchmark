@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8:latest
+FROM registry.access.redhat.com/ubi7:latest
 
 ENV GOPATH=/opt/go
 ENV PATH=$GOPATH/bin:$PATH
