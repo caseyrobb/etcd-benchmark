@@ -1,11 +1,7 @@
-FROM registry.access.redhat.com/ubi8:latest
+FROM registry.access.redhat.com/ubi8/go-toolset:latest
 
-ENV GOPATH=/opt/go
+ENV GOPATH=/opt/app-root/src/go
 ENV PATH=$GOPATH/bin:$PATH
-
-RUN mkdir -p "$GOPATH"
-RUN dnf upgrade -y
-RUN dnf install -y golang
 
 RUN go get go.etcd.io/etcd/v3/tools/benchmark
 
